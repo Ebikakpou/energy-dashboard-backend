@@ -51,6 +51,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     'corsheaders.middleware.CorsMiddleware',
+    "whitenoise.middleware.WhiteNoiseMiddleware",
+
 ]
 
 CORS_ALLOW_ALL_ORIGINS = True
@@ -133,3 +135,5 @@ CORS_ALLOWED_ORIGINS = [
 ]
 CORS_ALLOW_ALL_ORIGINS = True
 
+ALLOWED_HOSTS = ["energy-dashboard-backend.onrender.com", "localhost"]
+STATIC_ROOT = BASE_DIR / "staticfiles"
